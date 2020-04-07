@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: users-service
+  datasource:
+    url: jdbc:postgresql://${DB_IP:localhost}:${DB_PORT:5432}/${DP_TABLE:postgres}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+    initializationMode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: 'update'
